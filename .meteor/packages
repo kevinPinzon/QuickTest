@@ -23,3 +23,5 @@ spectrum:material-design-lite
 meteortoys:allthings
 iron:router
 underscore@1.0.9
+accounts-ui
+accounts-facebook

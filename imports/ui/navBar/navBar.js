@@ -18,12 +18,16 @@ Template.navBar.events({
     // 'click .dropdown'(event){
     // 	$(".dropdown dd ul").toggle();
     // },
-    // 'click #closeSesion'(event){
-    //     Meteor.logout();
-    // 	Router.go('/signIn');
-    // },
-		// 'click #perfilRegular'(event){
+    'click #closeSesion'(event){
+        Meteor.logout();
+    	Router.go('/signIn');
+    },
+		'click #iniciarSesion'(event){
+        // Meteor.logout();
+    	Router.go('/signIn');
+    }
     // 	Router.go('/perfil');
+		// 'click #perfilRegular'(event){
     // },
     // 'click #administrar'(event){
     // 	Router.go('/createAdmin');
