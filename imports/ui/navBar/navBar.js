@@ -1,17 +1,17 @@
 import './navBar.html';
 
 Template.navBar.onRendered(function(){
-	$(window).scroll(function() {
-		if ($(window).scrollTop() > $(".logoNav").height()) {
-			$('#navI').addClass("navbar-fixed");
-			$('#navI').addClass("positionNavbar");
-			$('#logoNav').show("normal");
-		} else{
-			$('#navI').removeClass("navbar-fixed");
-			$('#navI').removeClass("positionNavbar");
-			$('#logoNav').hide("normal");
-		}
-	});
+	// $(window).scroll(function() {
+	// 	if ($(window).scrollTop() > $(".logoNav").height()) {
+	// 		$('#navI').addClass("navbar-fixed");
+	// 		$('#navI').addClass("positionNavbar");
+	// 		$('#logoNav').show("normal");
+	// 	} else{
+	// 		$('#navI').removeClass("navbar-fixed");
+	// 		$('#navI').removeClass("positionNavbar");
+	// 		$('#logoNav').hide("normal");
+		// }
+	// });
 });
 
 Template.navBar.events({
@@ -20,15 +20,8 @@ Template.navBar.events({
     // },
     'click #closeSesion'(event){
         Meteor.logout();
-    	Router.go('/signIn');
-    },
-		'click #iniciarSesion'(event){
-        // Meteor.logout();
-    	Router.go('/signIn');
+    	Router.go('/');
     }
-    // 	Router.go('/perfil');
-		// 'click #perfilRegular'(event){
-    // },
     // 'click #administrar'(event){
     // 	Router.go('/createAdmin');
     // }
