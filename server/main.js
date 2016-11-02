@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Preguntas } from '../imports/api/preguntas.js';
+import { Spreguntas } from '../imports/api/spreguntas.js';
 
 
 Meteor.startup(() => {

@@ -6,7 +6,6 @@ Template.signUp.events({
         let profile = {
             firstName: $('#username').val()
         }
-
         let user = {
             username: $('#username').val(),
             email: $('#email').val(),

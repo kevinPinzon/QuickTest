@@ -6,9 +6,14 @@ import '../ui/navBar/navBar.js';
 import '../ui/footer/footer.js';
 import '../ui/SignIn/SignIn.js';
 import '../ui/SignUp/SignUp.js';
+import '../ui/preguntas/preguntas.js';
 
 Router.configure({
   layoutTemplate: 'layout'
+});
+
+Router.route('/preguntas', function () {
+  this.render('preguntas');
 });
 
 Router.route('/', function () {

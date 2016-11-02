@@ -1,13 +1,10 @@
-export const Preguntas = new Mongo.Collection('preguntas');
+export const Spreguntas = new Mongo.Collection('spreguntas');
 
 let Schema = {};
 
-Schema.pregunta = new SimpleSchema({
+Schema.spregunta = new SimpleSchema({
   pregunta: {
     type: String
-  },
-  tipo: {
-    type: Boolean
   },
   respuestas: {
     type: String
@@ -17,7 +14,7 @@ Schema.pregunta = new SimpleSchema({
   }
 });
 
-Preguntas.attachSchema(Schema.pregunta);
+Spreguntas.attachSchema(Schema.spregunta);
 
 if(Meteor.isServer){
   Meteor.methods({
@@ -37,7 +34,7 @@ if(Meteor.isServer){
     // }
   });
 
-  Meteor.publish('preguntas', function(){
-    return Canchas.find();
+  Meteor.publish('spreguntas', function(){
+    return Spreguntas.find();
   });
 }

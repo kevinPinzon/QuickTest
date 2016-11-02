@@ -1,0 +1,57 @@
+<template name="preguntas">
+
+      <div class="mdl-layout__tab-panel is-active" id="overview">
+        <button id="agregarVF" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          <i class="material-icons" role="presentation">add_circle</i> Pregunta V y F
+        </button>
+
+        <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
+        <dialog class="mdl-dialog">
+          <h4 class="mdl-dialog__title">Allow data collection?</h4>
+          <div class="mdl-dialog__content">
+            <p>
+              Allowing us to collect data will let us get you the information you want faster.
+            </p>
+          </div>
+          <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button">Agree</button>
+            <button type="button" class="mdl-button close">Disagree</button>
+        </div>
+      </dialog>
+
+        <br><br>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          <i class="material-icons" role="presentation">add_circle</i>  Pregunta Seleccion Unica
+        </button>
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+              <h3 class="mdl-cell mdl-cell--12-col">  Base de datos de Preguntas</h3>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h4>5 preguntas tipo V/F y 5 seleccion unica</h4>
+                <p>Se eligen <strong>10 preguntas</strong> de aleatoriamente de nuestra base de datos</p>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h4>Limite de tiempo</h4>
+                <p>Con un limite de tiempo de <strong>5 minutos</strong></p>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h4>Cultura basica</h4>
+                <p>Las preguntas seran de cultura basica</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section--footer mdl-color--white mdl-grid"></section>
+      </div>
+
+</template>
