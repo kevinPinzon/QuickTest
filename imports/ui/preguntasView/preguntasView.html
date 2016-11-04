@@ -1,0 +1,45 @@
+<template name="preguntasView">
+<br><br>
+  <div class="mui-container-fluid">
+    <div class="mui-container">
+
+      <div class="mui-dropdown">
+        <button id="dropPregunta" class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+          Agregar pregunta
+          <span class="mui-caret"></span>
+        </button>
+        <ul class="mui-dropdown__menu">
+          <li><a id="mostrarVF" href="#">Pregunta Verdadero y Falso</a></li>
+          <li><a id="mostrarSU" href="#">Pregunta Seleccion Unica</a></li>
+        </ul>
+      </div>
+<br><br>
+      <form id="formVF" style='display:none;'>
+        <legend>Pregunta Verdadero y Falso</legend>
+        <div class="mui-textfield">
+          <input type="text">
+          <label>Input 1</label>
+        </div>
+        <div class="mui-textfield">
+          <input type="text">
+          <label>Input 2</label>
+        </div>
+        <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+      </form>
+      <form id="formSU" style='display:none;'>
+        <legend>Pregunta Seleccion Unica</legend>
+        <div class="mui-textfield">
+          <input type="text">
+          <label>Input 1</label>
+        </div>
+        <div class="mui-textfield">
+          <input type="text">
+          <label>Input 2</label>
+        </div>
+        <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+      </form>
+
+    </div>
+  </div>
+<br><br>
+</template>
