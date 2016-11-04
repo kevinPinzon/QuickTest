@@ -32,7 +32,8 @@ Template.preguntasView.events({
       if ($("#afirmacionVF").val()!=""){
         var addVF = {
           afirmacion: afirmacion,
-          valor: respuestaVF
+          valor: respuestaVF,
+          exist:"s"
         };
         Meteor.call('vfpregunta.insert', addVF,function(err){
           if(err){
@@ -69,7 +70,8 @@ Template.preguntasView.events({
           correcta: correcta,
           respuesta1: respuesta1,
           respuesta2: respuesta2,
-          respuesta3: respuesta3
+          respuesta3: respuesta3,
+          exist:"s"
         };
         Meteor.call('spregunta.insert', addSU,function(err){
           if(err){
@@ -92,3 +94,16 @@ Template.preguntasView.events({
       }
     }
   });
+
+  Template.preguntasView.helpers({
+    PreguntasSU: function(){
+      return Spreguntas.find({'exist':'s'}).fetch();
+    },
+    PreguntasV: function(){
+      return Vfpreguntas.find({'valor':true}).fetch();
+    },
+    PreguntasF: function(){
+      return Vfpreguntas.find({'valor':false}).fetch();
+    }
+
+});

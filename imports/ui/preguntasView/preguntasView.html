@@ -15,7 +15,7 @@
       </div>
       <br><br>
       <form id="formVF" style='display:none;'>
-        <legend>Pregunta Verdadero y Falso</legend>
+        <legend>Nueva Pregunta Verdadero y Falso</legend>
         <div class="mui-textfield">
           <input id="afirmacionVF" type="text">
           <label >Afirmacion</label>
@@ -34,7 +34,7 @@
         <button style='display:none;' id="agregarVF" class="mui-btn mui-btn--primary mui-btn--fab">+</button>
 
       <form id="formSU" style='display:none;'>
-        <legend>Pregunta Seleccion Unica</legend>
+        <legend>Nueva Pregunta Seleccion Unica</legend>
         <div class="mui-textfield">
           <input id="preguntaSU" type="text">
           <label>Pregunta</label>
@@ -61,4 +61,90 @@
     </div>
   </div>
   <br><br>
+
+  <div class="mui-container-fluid">
+    <div class="mui-container">
+
+      <legend>Lista de Preguntas Seleccion Unica</legend>
+      {{#each PreguntasSU}}
+      <form id="listaSU">
+        <div class="mui-textfield">
+          <input id="ListPreguntasu" type="text" placeholder="{{pregunta}}" disabled>
+          <label>Pregunta</label>
+        </div>
+        <div class="mui-textfield">
+          <input id="ListrespuestaCorrectasu" type="text" placeholder="{{correcta}}" disabled>
+          <label>Respuesta Correcta</label>
+        </div>
+        <div class="mui-textfield">
+          <input id="Listrespuesta1su" type="text" placeholder="{{respuesta1}}" disabled>
+          <label>Respuesta Incorrecta</label>
+        </div>
+        <div class="mui-textfield">
+          <input id="Listrespuesta2su" type="text" placeholder="{{respuesta2}}" disabled>
+          <label>Respuesta Incorrecta</label>
+        </div>
+        <div class="mui-textfield">
+          <input id="Listrespuesta3su" type="text" placeholder="{{respuesta3}}" disabled>
+          <label>Respuesta Incorrecta</label>
+        </div>
+      </form>
+      <br><br>
+      {{/each}}
+    </div>
+
+  </div>
+  <br><br>
+
+
+  <div class="mui-container-fluid">
+    <div class="mui-container">
+
+      <legend>Lista de Preguntas Verdadero y Falso</legend>
+      {{#each PreguntasV}}
+      <form id="listaVF">
+        <div class="mui-textfield">
+          <input id="ListPreguntavf" type="text" placeholder="{{afirmacion}}" disabled>
+          <label>Afirmacion</label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" checked disabled>Verdadero
+          </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" disabled>Falso</label>
+        </div>
+      </form>
+      <br><br>
+      {{/each}}
+    </div>
+  </div>
+
+
+  <div class="mui-container-fluid">
+    <div class="mui-container">
+      {{#each PreguntasF}}
+      <form id="listaVF">
+        <div class="mui-textfield">
+          <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+          <label>Afirmacion</label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+          </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+          </div>
+      </form>
+      {{/each}}
+    </div>
+
+  </div>
+  <br><br>
+
 </template>

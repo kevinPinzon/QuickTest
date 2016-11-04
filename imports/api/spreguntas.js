@@ -17,6 +17,9 @@ Schema.spregunta = new SimpleSchema({
   },
   respuesta3: {
     type: String
+  },
+  exist: {
+    type: String
   }
 });
 
