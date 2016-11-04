@@ -13,7 +13,7 @@
           <li><a id="mostrarSU" href="#">Pregunta Seleccion Unica</a></li>
         </ul>
       </div>
-<br><br>
+      <br><br>
       <form id="formVF" style='display:none;'>
         <legend>Pregunta Verdadero y Falso</legend>
         <div class="mui-textfield">
@@ -21,43 +21,44 @@
           <label id="afirmacionVF">Afirmacion</label>
         </div>
         <div class="mui-radio">
-     <label>
-       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Verdadero
-     </label>
-   </div>
-   <div class="mui-radio">
-     <label>
-       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Falso</label>
-   </div>
-   <br>
-        <button class="mui-btn mui-btn--primary mui-btn--fab">+</button>
-      </form>
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Verdadero
+          </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Falso</label>
+          </div>
+          <br>
+        </form>
+        <button style='display:none;' id="agregarVF" class="mui-btn mui-btn--primary mui-btn--fab">+</button>
+
       <form id="formSU" style='display:none;'>
         <legend>Pregunta Seleccion Unica</legend>
         <div class="mui-textfield">
-          <input type="text">
-          <label id="preguntaSU">Pregunta</label>
+          <input id="preguntaSU" type="text">
+          <label>Pregunta</label>
         </div>
         <div class="mui-textfield">
-          <input type="text">
-          <label id="correcta"><strong>Respuesta Correcta</strong></label>
+          <input id="correcta" type="text">
+          <label><strong>Respuesta Correcta</strong></label>
         </div>
         <div class="mui-textfield">
-          <input type="text">
-          <label id="respuesta1">Respuesta</label>
+          <input id="respuesta1" type="text">
+          <label>Respuesta</label>
         </div>
         <div class="mui-textfield">
-          <input type="text">
-          <label id="respuesta2">Respuesta</label>
+          <input id="respuesta2" type="text">
+          <label>Respuesta</label>
         </div>
         <div class="mui-textfield">
-          <input type="text">
-          <label id="respuesta3">Respuesta</label>
+          <input id="respuesta3" type="text">
+          <label>Respuesta</label>
         </div>
-        <button class="mui-btn mui-btn--primary mui-btn--fab">+</button>
       </form>
+      <button style='display:none;' id="agregarSU" class="mui-btn mui-btn--primary mui-btn--fab">+</button>
 
     </div>
   </div>
-<br><br>
+  <br><br>
 </template>

@@ -6,10 +6,16 @@ Schema.spregunta = new SimpleSchema({
   pregunta: {
     type: String
   },
-  respuestas: {
+  correcta: {
     type: String
   },
-  respuestasCorrecta: {
+  respuesta1: {
+    type: String
+  },
+  respuesta2: {
+    type: String
+  },
+  respuesta3: {
     type: String
   }
 });
@@ -18,20 +24,16 @@ Spreguntas.attachSchema(Schema.spregunta);
 
 if(Meteor.isServer){
   Meteor.methods({
-    // 'cancha.create'(cancha){
-    //   return Canchas.insert(cancha, function(err){
-    //     if(err){
-    //       console.log(err);
-    //       throw new Meteor.Error(err);
-    //     }
-    //   });
-    // },
-    // 'cancha.remove'(cancha){
-    //   Canchas.remove(cancha, function(err){
-    //     if(err)
-    //       throw new Meteor.Error(err);
-    //   });
-    // }
+        'spregunta.insert'(spregunta){
+            console.log("dentro de Spregunta.insert...");
+            Spreguntas.insert(spregunta, function(err){
+              if(err){
+                console.log("dentro err de la clase spregunta");
+                throw new Meteor.Error('Error inserting spregunta: '+   err);
+              }else
+                console.log("dentro de spregunta: "+ Spreguntas.find().count());
+            });
+         }
   });
 
   Meteor.publish('spreguntas', function(){
