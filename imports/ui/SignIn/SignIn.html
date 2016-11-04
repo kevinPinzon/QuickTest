@@ -1,23 +1,25 @@
 <template name="signIn">
 
-  <div class="mdl-layout__tab-panel is-active" id="overview">
-      <div class="mdl-card mdl-cell mdl-cell--4-col">
-        <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-          <!-- Simple Textfield -->
-          <form action="#">
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="email" id="email" placeholder="Email">
-              <br>
-              <input class="mdl-textfield__input" type="password" id="password" placeholder="password">
-            </div>
-          </form>
-
-        </div>
-        <div class="mdl-card__actions">
-          <button id="loginButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Ingresar</button>
-        </div>
-      </div>
-    <section class="section--footer mdl-color--white mdl-grid"></section>
+  <div class="mui-container">
+    <br><br><br>
+    <h2 class="mui--text-center">Ingresa tus Datos</h2>
+    <br>
   </div>
-
+  <div class="mui-container">
+    <form action="#">
+      <div class="mui-textfield">
+        <input type="email" id="email">
+        <label>Email</label>
+      </div>
+      <div class="mui-textfield">
+        <input type="password" id="password">
+        <label>Password</label>
+      </div>
+    </form>
+  </div>
+  <br>
+  <div class="mui-container">
+    <button id="loginButton" class="mui-btn mui-btn--raised mui-btn--primary">Ingresar</button>
+  </div>
+<br><br>
 </template>
