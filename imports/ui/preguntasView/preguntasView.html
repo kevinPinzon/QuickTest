@@ -18,25 +18,43 @@
         <legend>Pregunta Verdadero y Falso</legend>
         <div class="mui-textfield">
           <input type="text">
-          <label>Input 1</label>
+          <label id="afirmacionVF">Afirmacion</label>
         </div>
-        <div class="mui-textfield">
-          <input type="text">
-          <label>Input 2</label>
-        </div>
-        <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+        <div class="mui-radio">
+     <label>
+       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Verdadero
+     </label>
+   </div>
+   <div class="mui-radio">
+     <label>
+       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Falso</label>
+   </div>
+   <br>
+        <button class="mui-btn mui-btn--primary mui-btn--fab">+</button>
       </form>
       <form id="formSU" style='display:none;'>
         <legend>Pregunta Seleccion Unica</legend>
         <div class="mui-textfield">
           <input type="text">
-          <label>Input 1</label>
+          <label id="preguntaSU">Pregunta</label>
         </div>
         <div class="mui-textfield">
           <input type="text">
-          <label>Input 2</label>
+          <label id="correcta"><strong>Respuesta Correcta</strong></label>
         </div>
-        <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+        <div class="mui-textfield">
+          <input type="text">
+          <label id="respuesta1">Respuesta</label>
+        </div>
+        <div class="mui-textfield">
+          <input type="text">
+          <label id="respuesta2">Respuesta</label>
+        </div>
+        <div class="mui-textfield">
+          <input type="text">
+          <label id="respuesta3">Respuesta</label>
+        </div>
+        <button class="mui-btn mui-btn--primary mui-btn--fab">+</button>
       </form>
 
     </div>
