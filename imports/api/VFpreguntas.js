@@ -8,6 +8,9 @@ Schema.vfpregunta = new SimpleSchema({
   },
   valor: {
     type: Boolean
+  },
+  numero:{
+    type: Number
   }
 });
 

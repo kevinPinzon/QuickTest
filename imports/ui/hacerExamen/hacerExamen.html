@@ -1,0 +1,88 @@
+<template name="hacerExamen">
+  <div id="divPreExamen" class="mui-container-fluid">
+    <br><br><br>
+    <h2 class="mui--text-display2 mui-col-md-6 mui-col-md-offset-3">Antes de comenzar...</h2>
+    <br><br><br><br><br><br>
+    <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+      <form>
+        <br>
+        <div class="mui-textfield">
+          <input id="nombreInput" type="text">
+          <label>Escriba su nombre</label>
+        </div>
+      </form>
+      <button id="IniciarExamen" class="mui-btn mui-btn--primary">Comenzar a Examen</button>
+    </div>
+  </div>
+
+  <div id="divExamen" class="mui-container-fluid" style='display:none;'>
+    <br><br><br>
+    <h2 class="mui--text-display2 mui-col-md-6 mui-col-md-offset-3">En examen</h2>
+    <br><br><br><br><br><br>
+    {{#each PreguntasVF1}}
+    <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+      <h3>{{numero}}</h3>
+      <form id="listaVF">
+        <div class="mui-textfield">
+          <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+          <label>Afirmacion</label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+          </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+          </div>
+      </form>
+    </div>
+    <br><br><br>
+      {{/each}}
+      {{#each PreguntasVF2}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <h3>{{numero}}</h3>
+        <form id="listaVF">
+          <div class="mui-textfield">
+            <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+            <label>Afirmacion</label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+            </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+            </div>
+        </form>
+      </div>
+      <br><br><br>
+        {{/each}}
+        {{#each PreguntasVF3}}
+        <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+          <h3>{{numero}}</h3>
+          <form id="listaVF">
+            <div class="mui-textfield">
+              <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+              <label>Afirmacion</label>
+            </div>
+            <div class="mui-radio">
+              <label>
+                <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+              </label>
+            </div>
+            <div class="mui-radio">
+              <label>
+                <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+              </div>
+          </form>
+        </div>
+        <br><br><br>
+          {{/each}}
+
+  </div>
+  <br><br><br><br><br>
+</template>

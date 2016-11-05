@@ -1,5 +1,7 @@
 import './LandingPage.html';
 
-Template.landingPage.onRendered(function(){
-    $('.parallax').parallax();
-})
+Template.landingPage.events({
+    'click #IniciarExam'(event){
+    	Router.go('/examen');
+    }
+});

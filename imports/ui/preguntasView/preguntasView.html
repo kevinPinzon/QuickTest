@@ -3,7 +3,7 @@
   <div class="mui-container-fluid">
     <div class="mui-container">
 
-      <div class="mui-dropdown">
+      <div class="mui-dropdown mui-col-md-3 mui-col-md-offset-5">
         <button id="dropPregunta" class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
           Agregar pregunta
           <span class="mui-caret"></span>
@@ -13,8 +13,8 @@
           <li><a id="mostrarSU" href="#">Pregunta Seleccion Unica</a></li>
         </ul>
       </div>
-      <br><br>
-      <form id="formVF" style='display:none;'>
+      <br><br><br><br>
+      <form class="mui--z2 mui-col-md-6 mui-col-md-offset-3" id="formVF" style='display:none;'>
         <legend>Nueva Pregunta Verdadero y Falso</legend>
         <div class="mui-textfield">
           <input id="afirmacionVF" type="text">
@@ -33,7 +33,7 @@
         </form>
         <button style='display:none;' id="agregarVF" class="mui-btn mui-btn--primary mui-btn--fab">+</button>
 
-      <form id="formSU" style='display:none;'>
+      <form class="mui--z2  mui-col-md-6 mui-col-md-offset-3" id="formSU" style='display:none;'>
         <legend>Nueva Pregunta Seleccion Unica</legend>
         <div class="mui-textfield">
           <input id="preguntaSU" type="text">
@@ -63,32 +63,35 @@
   <br><br>
 
   <div class="mui-container-fluid">
-    <div class="mui-container">
+    <div class="mui-container mui-col-md-6 mui-col-md-offset-3">
 
       <legend>Lista de Preguntas Seleccion Unica</legend>
       {{#each PreguntasSU}}
+      <h3>{{numero}}</h3>
       <form id="listaSU">
         <div class="mui-textfield">
-          <input id="ListPreguntasu" type="text" placeholder="{{pregunta}}" disabled>
-          <label>Pregunta</label>
+          <input id="ListPreguntasu" type="text" placeholder=" {{pregunta}}" disabled>
+          <label> Pregunta</label>
         </div>
         <div class="mui-textfield">
-          <input id="ListrespuestaCorrectasu" type="text" placeholder="{{correcta}}" disabled>
-          <label>Respuesta Correcta</label>
+          <input id="ListrespuestaCorrectasu" type="text" placeholder=" {{correcta}}" disabled>
+          <label> Respuesta Correcta</label>
         </div>
         <div class="mui-textfield">
-          <input id="Listrespuesta1su" type="text" placeholder="{{respuesta1}}" disabled>
-          <label>Respuesta Incorrecta</label>
+          <input id="Listrespuesta1su" type="text" placeholder=" {{respuesta1}}" disabled>
+          <label> Respuesta Incorrecta</label>
         </div>
         <div class="mui-textfield">
-          <input id="Listrespuesta2su" type="text" placeholder="{{respuesta2}}" disabled>
-          <label>Respuesta Incorrecta</label>
+          <input id="Listrespuesta2su" type="text" placeholder=" {{respuesta2}}" disabled>
+          <label> Respuesta Incorrecta</label>
         </div>
         <div class="mui-textfield">
-          <input id="Listrespuesta3su" type="text" placeholder="{{respuesta3}}" disabled>
-          <label>Respuesta Incorrecta</label>
+          <input id="Listrespuesta3su" type="text" placeholder=" {{respuesta3}}" disabled>
+          <label> Respuesta Incorrecta</label>
         </div>
       </form>
+      <br><br>
+      <div class="mui-divider"></div>
       <br><br>
       {{/each}}
     </div>
@@ -98,7 +101,7 @@
 
 
   <div class="mui-container-fluid">
-    <div class="mui-container">
+    <div class="mui-container mui-col-md-6 mui-col-md-offset-3">
 
       <legend>Lista de Preguntas Verdadero y Falso</legend>
       {{#each PreguntasV}}
@@ -118,14 +121,17 @@
         </div>
       </form>
       <br><br>
+      <div class="mui-divider"></div>
+      <br><br>
       {{/each}}
     </div>
   </div>
 
 
   <div class="mui-container-fluid">
-    <div class="mui-container">
+    <div class="mui-container mui-col-md-6 mui-col-md-offset-3">
       {{#each PreguntasF}}
+      <h3>{{numero}}</h3>
       <form id="listaVF">
         <div class="mui-textfield">
           <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
@@ -141,6 +147,9 @@
             <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
           </div>
       </form>
+      <br><br>
+      <div class="mui-divider"></div>
+      <br><br>
       {{/each}}
     </div>
 

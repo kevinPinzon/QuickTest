@@ -7,12 +7,17 @@ Template.preguntasView.onRendered(function(){
     Meteor.subscribe('vfpreguntas');
 });
 
+var actual =1;
+
 Template.preguntasView.events({
+    'click #dropPregunta'(event){
+    },
     'click #mostrarVF'(event){
       document.getElementById("formVF").style.display = "inline";
       document.getElementById("agregarVF").style.display = "inline";
       document.getElementById("formSU").style.display = "none";
       document.getElementById("agregarSU").style.display = "none";
+
     },
     'click #mostrarSU'(event){
       document.getElementById("formSU").style.display = "inline";
@@ -30,10 +35,11 @@ Template.preguntasView.events({
         respuestaVF=false;
       }
       if ($("#afirmacionVF").val()!=""){
+
         var addVF = {
           afirmacion: afirmacion,
           valor: respuestaVF,
-          exist:"s"
+          numero: actual
         };
         Meteor.call('vfpregunta.insert', addVF,function(err){
           if(err){
@@ -48,7 +54,7 @@ Template.preguntasView.events({
         });
       }
       else {
-        swal("Error", "Formulario Imcompleto", "error");
+        swal("Error", "Formulario incompleto", "error");
       }
     },
     'click #agregarSU'(event){
@@ -71,7 +77,8 @@ Template.preguntasView.events({
           respuesta1: respuesta1,
           respuesta2: respuesta2,
           respuesta3: respuesta3,
-          exist:"s"
+          exist:"s",
+          numero: actual
         };
         Meteor.call('spregunta.insert', addSU,function(err){
           if(err){
@@ -90,7 +97,7 @@ Template.preguntasView.events({
         });
       }
       else {
-        swal("Error", "Formulario Imcompleto", "error");
+        swal("Error", "Formulario incompleto", "error");
       }
     }
   });
@@ -105,5 +112,4 @@ Template.preguntasView.events({
     PreguntasF: function(){
       return Vfpreguntas.find({'valor':false}).fetch();
     }
-
 });

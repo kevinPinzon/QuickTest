@@ -20,6 +20,9 @@ Schema.spregunta = new SimpleSchema({
   },
   exist: {
     type: String
+  },
+  numero:{
+    type: Number
   }
 });
 

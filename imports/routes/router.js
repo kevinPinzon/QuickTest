@@ -7,9 +7,14 @@ import '../ui/footer/footer.js';
 import '../ui/SignIn/SignIn.js';
 import '../ui/SignUp/SignUp.js';
 import '../ui/preguntasView/preguntasView.js';
+import '../ui/hacerExamen/hacerExamen.js';
 
 Router.configure({
   layoutTemplate: 'layout'
+});
+
+Router.route('/examen', function () {
+  this.render('hacerExamen');
 });
 
 Router.route('/preguntasView', function () {
