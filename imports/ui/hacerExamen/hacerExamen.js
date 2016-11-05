@@ -93,7 +93,7 @@ Template.hacerExamen.events({
         console.log(err);
       }
       else{
-        swal("Hola "+nombre, newCalificacion.nota+"%"+" es tu nota Final", "info");
+        swal("Hola "+nombre, "Tu nota Final es "+newCalificacion.nota+"%", "info");
         document.getElementById("divPreExamen").style.display = "inline";
         document.getElementById("divExamen").style.display = "none";
       }
