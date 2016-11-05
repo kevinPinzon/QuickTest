@@ -8,6 +8,7 @@ import '../ui/SignIn/SignIn.js';
 import '../ui/SignUp/SignUp.js';
 import '../ui/preguntasView/preguntasView.js';
 import '../ui/hacerExamen/hacerExamen.js';
+import '../ui/resultadosView/resultadosView.js';
 
 Router.configure({
   layoutTemplate: 'layout'
@@ -31,4 +32,8 @@ Router.route('/signin', function () {
 
 Router.route('/signup', function () {
   this.render('signUp');
+});
+
+Router.route('/resultados', function () {
+  this.render('resultadosView');
 });
