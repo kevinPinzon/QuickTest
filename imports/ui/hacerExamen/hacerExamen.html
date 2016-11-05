@@ -8,7 +8,7 @@
         <br>
         <div class="mui-textfield">
           <input id="nombreInput" type="text">
-          <label>Escriba su nombre</label>
+          <label>Escribe tu nombre</label>
         </div>
       </form>
       <button id="IniciarExamen" class="mui-btn mui-btn--primary">Comenzar a Examen</button>
@@ -18,16 +18,311 @@
   <div id="divExamen" class="mui-container-fluid" style='display:none;'>
     <br><br>
     <h2 class="mui--text-display2 mui--text-mui-col-md-4 mui-col-md-offset-8"> 4:56 </h2>
-    <br><br><br><br>
-    {{#each PreguntasVF1}}
+    <br><br><br>
     <div class="mui-col-md-8 mui-col-md-offset-3">
       <div class="mui-row">
-        <legend><strong>A.</strong> Valor 10c/u </legend>
+        <legend><strong>A. Tipo Seleccion Unica</strong> Valor 10c/u </legend>
+        <p><strong>Instrucciones: </strong>Seleccione Verdadero o falso, para cada afirmacion segun corresponda.</p>
+      </div>
+    </div>
+    {{#each PreguntasSU1}}
+    <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+      <br>
+      <h3>Pregunta 1</h3>
+      <form id="listaSU">
+        <div class="mui-textfield">
+          <input id="ListPreguntasu" type="text" value=" {{pregunta}}" disabled>
+          <label> Pregunta</label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta0" type="text" disabled value="{{respuesta0}}">
+          <label>Respuesta 1 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta1" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta1" type="text" disabled value="{{respuesta1}}">
+          <label>Respuesta 2 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta2" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta2" type="text" disabled value="{{respuesta2}}">
+          <label>Respuesta 3 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta3" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta3" type="text" disabled value="{{respuesta3}}">
+          <label>Respuesta 4 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta4" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+      </form>
+    </div>
+    {{/each}}
+
+    {{#each PreguntasSU2}}
+    <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+      <br>
+      <h3>Pregunta 2</h3>
+      <form id="listaSU">
+        <div class="mui-textfield">
+          <input id="ListPreguntasu" type="text" value=" {{pregunta}}" disabled>
+          <label> Pregunta</label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta0" type="text" disabled value="{{respuesta0}}">
+          <label>Respuesta 1 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta12" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta1" type="text" disabled value="{{respuesta1}}">
+          <label>Respuesta 2 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta22" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta2" type="text" disabled value="{{respuesta2}}">
+          <label>Respuesta 3 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta32" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+
+        <br><br>
+        <div class="mui-textfield">
+          <input id="respuesta3" type="text" disabled value="{{respuesta3}}">
+          <label>Respuesta 4 </label>
+        </div>
+        <div class="mui-radio">
+          <label>
+            <input id="rbcoreccta42" type="radio" name="optionsRadios" value="option1">Correcta
+          </label>
+        </div>
+      </form>
+    </div>
+    <br><br>
+      {{/each}}
+
+      {{#each PreguntasSU3}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <br>
+        <h3>Pregunta 3</h3>
+        <form id="listaSU">
+          <div class="mui-textfield">
+            <input id="ListPreguntasu" type="text" value=" {{pregunta}}" disabled>
+            <label> Pregunta</label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta0" type="text" disabled value="{{respuesta0}}">
+            <label>Respuesta 3 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta13" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta1" type="text" disabled value="{{respuesta1}}">
+            <label>Respuesta 2 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta23" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta2" type="text" disabled value="{{respuesta2}}">
+            <label>Respuesta 3 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta33" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta3" type="text" disabled value="{{respuesta3}}">
+            <label>Respuesta 4 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta43" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+        </form>
+      </div>
+      <br><br>
+      {{/each}}
+
+      {{#each PreguntasSU4}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <br>
+        <h3>Pregunta 4</h3>
+        <form id="listaSU">
+          <div class="mui-textfield">
+            <input id="ListPreguntasu" type="text" value=" {{pregunta}}" disabled>
+            <label> Pregunta</label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta0" type="text" disabled value="{{respuesta0}}">
+            <label>Respuesta 1 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta14" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta1" type="text" disabled value="{{respuesta1}}">
+            <label>Respuesta 2 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta24" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta2" type="text" disabled value="{{respuesta2}}">
+            <label>Respuesta 3 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta34" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta3" type="text" disabled value="{{respuesta3}}">
+            <label>Respuesta 4 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta44" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+        </form>
+      </div>
+      <br><br>
+      {{/each}}
+
+      {{#each PreguntasSU5}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <br>
+        <h3>Pregunta 5</h3>
+        <form id="listaSU">
+          <div class="mui-textfield">
+            <input id="ListPreguntasu" type="text" value=" {{pregunta}}" disabled>
+            <label> Pregunta</label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta0" type="text" disabled value="{{respuesta0}}">
+            <label>Respuesta 1 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta15" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta1" type="text" disabled value="{{respuesta1}}">
+            <label>Respuesta 2 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta25" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta2" type="text" disabled value="{{respuesta2}}">
+            <label>Respuesta 3 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta35" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+
+          <br><br>
+          <div class="mui-textfield">
+            <input id="respuesta3" type="text" disabled value="{{respuesta3}}">
+            <label>Respuesta 4 </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbcoreccta45" type="radio" name="optionsRadios" value="option1">Correcta
+            </label>
+          </div>
+        </form>
+      </div>
+      <br><br>
+      {{/each}}
+
+    {{#each PreguntasVF1}}
+    <div class="mui-col-md-8 mui-col-md-offset-3">
+      <br><br><br>
+      <div class="mui-row">
+        <legend><strong>B. Tipo Verdadero y Falso</strong> Valor 10c/u </legend>
         <p><strong>Instrucciones: </strong>Seleccione Verdadero o falso, para cada afirmacion segun corresponda.</p>
       </div>
     </div>
     <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-      <h3>{{numero}}</h3>
       <h3>Pregunta 6</h3>
       <form id="listaVF">
         <div class="mui-textfield">
@@ -47,9 +342,9 @@
       </div>
       <br><br><br>
       {{/each}}
+
       {{#each PreguntasVF2}}
       <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-        <h3>{{numero}}</h3>
         <h3>Pregunta 7</h3>
         <form id="listaVF">
           <div class="mui-textfield">
@@ -69,9 +364,9 @@
       </div>
       <br><br><br>
         {{/each}}
+
         {{#each PreguntasVF3}}
       <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-        <h3>{{numero}}</h3>
         <h3>Pregunta 8</h3>
         <form id="listaVF">
           <div class="mui-textfield">
@@ -91,9 +386,9 @@
       </div>
       <br><br><br>
         {{/each}}
+
         {{#each PreguntasVF4}}
       <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-        <h3>{{numero}}</h3>
         <h3>Pregunta 9</h3>
         <form id="listaVF">
           <div class="mui-textfield">
@@ -113,9 +408,9 @@
       </div>
       <br><br><br>
         {{/each}}
+
         {{#each PreguntasVF5}}
       <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-        <h3>{{numero}}</h3>
         <h3>Pregunta 10</h3>
         <form id="listaVF">
           <div class="mui-textfield">
