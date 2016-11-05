@@ -3,7 +3,7 @@ import { Spreguntas } from '../../api/spreguntas.js';
 import { Vfpreguntas } from '../../api/VFpreguntas.js';
 import { Calificaciones } from '../../api/calificaciones.js';
 
-var max,preg1,preg2,preg3,preg4,preg5,preg6,preg7,preg8,preg9,preg10,puntos;
+var max,preg1,preg2,preg3,preg4,preg5,preg6,preg7,preg8,preg9,preg10,puntos=0,nombre;
 
 Template.hacerExamen.onRendered(function(){
     Meteor.subscribe('spreguntas');
@@ -16,7 +16,7 @@ Template.hacerExamen.events({
       document.getElementById("divPreExamen").style.display = "none";
       document.getElementById("divExamen").style.display = "inline";
       swal("Muy Bien", "Examen apunto de inicar", "info");
-
+        nombre= document.getElementById('nombreInput').value;
         console.log("pregunta1: "+preg1);
         console.log("pregunta2: "+preg2);
         console.log("pregunta3: "+preg3);
@@ -85,7 +85,7 @@ Template.hacerExamen.events({
       revisar(selecionada10,preg10);
     }
     var newCalificacion = {
-      nombre: $("#nombreInput").val(),
+      nombre: nombre,
       nota: puntos*10,
     };
     Meteor.call('calificacion.insert', newCalificacion,function(err){
@@ -93,7 +93,7 @@ Template.hacerExamen.events({
         console.log(err);
       }
       else{
-        swal("Hola "+$("#nombreInput").val(), ""+puntos*10+"%"+" es tu nota Final", "info");
+        swal("Hola "+nombre, newCalificacion.nota+"%"+" es tu nota Final", "info");
         document.getElementById("divPreExamen").style.display = "inline";
         document.getElementById("divExamen").style.display = "none";
       }
