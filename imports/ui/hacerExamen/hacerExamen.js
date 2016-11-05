@@ -140,7 +140,7 @@ revisar = function(valorSeleccionado,num){
 };
 
 randomPreguntas = function(){
-  max = 5;
+  max = 6;
   preg6 = Math.floor(Math.random() * (max - 0)) + 0;
   do {
     preg7 = Math.floor(Math.random() * (max - 0)) + 0;

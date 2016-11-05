@@ -6,7 +6,7 @@ Schema.spregunta = new SimpleSchema({
   pregunta: {
     type: String
   },
-  correcta: {
+  respuesta0: {
     type: String
   },
   respuesta1: {
@@ -18,10 +18,10 @@ Schema.spregunta = new SimpleSchema({
   respuesta3: {
     type: String
   },
-  exist: {
-    type: String
-  },
   numero:{
+    type: Number
+  },
+  correcta:{
     type: Number
   }
 });

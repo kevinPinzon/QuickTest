@@ -59,26 +59,27 @@ Template.preguntasView.events({
     },
     'click #agregarSU'(event){
       var pregunta = document.getElementById('preguntaSU').value;
-      var correcta = document.getElementById('correcta').value;
+      var respuesta0 = document.getElementById('respuesta0').value;
       var respuesta1 = document.getElementById('respuesta1').value;
       var respuesta2 = document.getElementById('respuesta2').value;
       var respuesta3 = document.getElementById('respuesta3').value;
+
       //console.log("pregunta: "+);
-      if ($("#preguntaSU").val()!="" && $("#correcta").val()!="" && $("#respuesta1").val()!="" && $("#respuesta2").val()!="" && $("#respuesta3").val()!="") {
+      if ($("#preguntaSU").val()!="" && $("#respuesta0").val()!="" && $("#respuesta1").val()!="" && $("#respuesta2").val()!="" && $("#respuesta3").val()!="") {
         console.log("pregunta: "+pregunta);
-        console.log("correcta: "+correcta);
+        console.log("respuesta0: "+respuesta0);
         console.log("respuesta1: "+respuesta1);
         console.log("respuesta2: "+respuesta2);
         console.log("respuesta3: "+respuesta3);
 
         var addSU = {
           pregunta: pregunta,
-          correcta: correcta,
+          respuesta0: respuesta0,
           respuesta1: respuesta1,
           respuesta2: respuesta2,
           respuesta3: respuesta3,
-          exist:"s",
-          numero: actual
+          numero: actual,
+          correcta:rbCorrectoSU()
         };
         Meteor.call('spregunta.insert', addSU,function(err){
           if(err){
@@ -103,8 +104,17 @@ Template.preguntasView.events({
   });
 
   Template.preguntasView.helpers({
-    PreguntasSU: function(){
-      return Spreguntas.find({'exist':'s'}).fetch();
+    PreguntasSU1: function(){
+      return Spreguntas.find({'correcta':1}).fetch();
+    },
+    PreguntasSU2: function(){
+      return Spreguntas.find({'correcta':2}).fetch();
+    },
+    PreguntasSU3: function(){
+      return Spreguntas.find({'correcta':3}).fetch();
+    },
+    PreguntasSU4: function(){
+      return Spreguntas.find({'correcta':4}).fetch();
     },
     PreguntasV: function(){
       return Vfpreguntas.find({'valor':true}).fetch();
@@ -113,3 +123,15 @@ Template.preguntasView.events({
       return Vfpreguntas.find({'valor':false}).fetch();
     }
 });
+
+rbCorrectoSU = function(){
+  if (document.getElementById('rbcoreccta1').checked) {
+    return 1;
+  }else if (document.getElementById('rbcoreccta2').checked) {
+    return 2;
+  }else if (document.getElementById('rbcoreccta3').checked) {
+    return 3;
+  }else if (document.getElementById('rbcoreccta4').checked) {
+    return 4;
+  }
+}
