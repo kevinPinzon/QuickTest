@@ -16,73 +16,132 @@
   </div>
 
   <div id="divExamen" class="mui-container-fluid" style='display:none;'>
-    <br><br><br>
-    <h2 class="mui--text-display2 mui-col-md-6 mui-col-md-offset-3">En examen</h2>
-    <br><br><br><br><br><br>
+    <br><br>
+    <h2 class="mui--text-display2 mui--text-mui-col-md-4 mui-col-md-offset-8"> 4:56 </h2>
+    <br><br><br><br>
     {{#each PreguntasVF1}}
+    <div class="mui-col-md-8 mui-col-md-offset-3">
+      <div class="mui-row">
+        <legend><strong>A.</strong> Valor 10c/u </legend>
+        <p><strong>Instrucciones: </strong>Seleccione Verdadero o falso, para cada afirmacion segun corresponda.</p>
+      </div>
+    </div>
     <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
       <h3>{{numero}}</h3>
+      <h3>Pregunta 6</h3>
       <form id="listaVF">
         <div class="mui-textfield">
-          <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+          <input id="ListPreguntavf" type="text" required value="{{afirmacion}}" disabled>
           <label>Afirmacion</label>
         </div>
         <div class="mui-radio">
           <label>
-            <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+            <input id="rbV1" type="radio" name="optionsRadios1" value="option1">Verdadero
           </label>
         </div>
         <div class="mui-radio">
           <label>
-            <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+            <input id="rbF1" type="radio" name="optionsRadios1" value="option2">Falso</label>
           </div>
-      </form>
-    </div>
-    <br><br><br>
+        </form>
+      </div>
+      <br><br><br>
       {{/each}}
       {{#each PreguntasVF2}}
       <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
         <h3>{{numero}}</h3>
+        <h3>Pregunta 7</h3>
         <form id="listaVF">
           <div class="mui-textfield">
-            <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
+            <input id="ListPreguntavf" type="text" required value="{{afirmacion}}" disabled>
             <label>Afirmacion</label>
           </div>
           <div class="mui-radio">
             <label>
-              <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
+              <input id="rbV2" type="radio" name="optionsRadios2" value="option12">Verdadero
             </label>
           </div>
           <div class="mui-radio">
             <label>
-              <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
+              <input id="rbF2" type="radio" name="optionsRadios2" value="option22">Falso</label>
             </div>
         </form>
       </div>
       <br><br><br>
         {{/each}}
         {{#each PreguntasVF3}}
-        <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
-          <h3>{{numero}}</h3>
-          <form id="listaVF">
-            <div class="mui-textfield">
-              <input id="ListPreguntavf" type="text" required placeholder="{{afirmacion}}" disabled>
-              <label>Afirmacion</label>
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <h3>{{numero}}</h3>
+        <h3>Pregunta 8</h3>
+        <form id="listaVF">
+          <div class="mui-textfield">
+            <input id="ListPreguntavf" type="text" required value="{{afirmacion}}" disabled>
+            <label>Afirmacion</label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbV3" type="radio" name="optionsRadios3" value="option13">Verdadero
+            </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbF3" type="radio" name="optionsRadios3" value="option23">Falso</label>
             </div>
-            <div class="mui-radio">
-              <label>
-                <input id="rbVerdadero2" type="radio" name="optionsRadios2" value="option12" disabled>Verdadero
-              </label>
+        </form>
+      </div>
+      <br><br><br>
+        {{/each}}
+        {{#each PreguntasVF4}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <h3>{{numero}}</h3>
+        <h3>Pregunta 9</h3>
+        <form id="listaVF">
+          <div class="mui-textfield">
+            <input id="ListPreguntavf" type="text" required value="{{afirmacion}}" disabled>
+            <label>Afirmacion</label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbV4" type="radio" name="optionsRadios4" value="option14">Verdadero
+            </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbF4" type="radio" name="optionsRadios4" value="option24">Falso</label>
             </div>
-            <div class="mui-radio">
-              <label>
-                <input id="rbFalso2" type="radio" name="optionsRadios2" value="option22" checked disabled>Falso</label>
-              </div>
-          </form>
-        </div>
-        <br><br><br>
-          {{/each}}
-
-  </div>
-  <br><br><br><br><br>
+        </form>
+      </div>
+      <br><br><br>
+        {{/each}}
+        {{#each PreguntasVF5}}
+      <div class="mui--z2 mui-col-md-6 mui-col-md-offset-3">
+        <h3>{{numero}}</h3>
+        <h3>Pregunta 10</h3>
+        <form id="listaVF">
+          <div class="mui-textfield">
+            <input id="ListPreguntavf" type="text" required value="{{afirmacion}}" disabled>
+            <label>Afirmacion</label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbV5" type="radio" name="optionsRadios5" value="option15">Verdadero
+            </label>
+          </div>
+          <div class="mui-radio">
+            <label>
+              <input id="rbF5" type="radio" name="optionsRadios5" value="option25">Falso</label>
+            </div>
+        </form>
+      </div>
+      <br><br><br>
+      {{/each}}
+      <br><br>
+      <div class="mui-divider mui-col-md-6 mui-col-md-offset-3">
+        <br><br>
+        <button id="finalizarExamen" class="mui-btn mui-btn--large mui-btn--primary">Finalizar</button>
+        <br><br><br><br>
+      </div>
+      <br><br>
+    </div>
+    <br><br><br>
 </template>
