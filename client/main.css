@@ -237,3 +237,11 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+label {
+  font-size: 1.3em;
+  font-weight: 100;
+}
+#ListPreguntasu, #ListPreguntavf {
+  font-size: 1.5em;
+  font-weight: 400;
+}
