@@ -1,3 +1,26 @@
 <template name="resultadosView">
-  
+  <div class="mui-container-fluid">
+    <br><br><br>
+    <div class="mui--z1 mui-container mui-col-md-6 mui-col-md-offset-3">
+      <h2>Lista de resultados</h2>
+      <br><br>
+      <table class="mui--z2 mui-table mui-table--bordered">
+        <thead>
+          <tr>
+            <th class="mui--text-center">Nombre</th>
+            <th class="mui--text-center">Nota Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each Resultados}}
+          <tr>
+            <td class="mui--text-center">{{nombre}}</td>
+            <td class="mui--text-center">{{nota}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
 </template>
