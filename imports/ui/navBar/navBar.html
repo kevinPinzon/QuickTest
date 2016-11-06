@@ -5,19 +5,36 @@
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
           <h1 class="mui--text-display2"><i class="material-icons">ic_dvr</i> QuickTest</h1>
+          <div class="mui-dropdown mui-col-md-2 mui-col-md-offset-7">
+            <button class="mui-btn mui-btn--small mui-btn--danger mui-btn--fab" data-mui-toggle="dropdown">N
+              <span class="mui-caret"></span>
+            </button>
+            <ul class="mui-dropdown__menu">
+             <li><a href="#">Option 1</a></li>
+             <li><a href="#">Option 2</a></li>
+             <li><a href="#">Option 3</a></li>
+             <li><a href="#">Option 4</a></li>
+           </ul>
+           </div>
         </div>
+
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <ul class="mui-tabs__bar mui-tabs__bar--justified">
           {{#if currentUser}}
-          <a id="preguntas" href="/preguntasView" class="mdl-layout__tab is-active"> Preguntas </a>
-          <a id="resultados" href="/resultados" class="mdl-layout__tab is-active"> Resultados </a>
-          <a id="closeSesion" href="" class="mdl-layout__tab is-active">Cerrar Sesion</a>
+           <li class="mui--is-active"><a > Bienvenido {{currentUser.profile.firstName}}</a></li>
+           <li class="mui--is-active"><a id="preguntas" href="/preguntasView"> Preguntas </a></li>
+           <li class="mui--is-active"><a id="resultados" href="/resultados"> Resultados </a></li>
+           <li class="mui--is-active"><a id="closeSesion" href="">Cerrar Sesion</a></li>
+
+
           {{else}}
           <a id="home" href="/" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i>Home</a>
           <a id="signIn" href="/signIn" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i> Acceder a mi cuenta</a>
           <a id="signUp" href="/signUp" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i>Crear cuenta</a>
           {{/if}}
+        </ul>
         </div>
       </header>
 </template>
