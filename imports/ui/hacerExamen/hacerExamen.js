@@ -13,9 +13,16 @@ Template.hacerExamen.onRendered(function(){
 Template.hacerExamen.events({
   'click #IniciarExamen'(event){
     if ($("#nombreInput").val()!=""){
+      var tiempoLimite = 5000;//1*60000;
+      setTimeout(function(){
+        var btnTerminar = document.getElementById("finalizarExamen");
+        swal("Tiempo Agotado","Limite de tiempo de 5 minutos a termiando", "info");
+        btnTerminar.click();
+      }, tiempoLimite);
+
+      swal("Muy Bien", "Examen apunto de inicar", "info");
       document.getElementById("divPreExamen").style.display = "none";
       document.getElementById("divExamen").style.display = "inline";
-      swal("Muy Bien", "Examen apunto de inicar", "info");
         nombre= document.getElementById('nombreInput').value;
         console.log("pregunta1: "+preg1);
         console.log("pregunta2: "+preg2);
