@@ -4,8 +4,9 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h1 class="mui--text-display2"><i class="material-icons">ic_dvr</i> QuickTest</h1>
-          <div class="mui-dropdown mui-col-md-2 mui-col-md-offset-7">
+          <h1 class="mui--text-display2"><img src="imagenes/exam.png"/> QuickTest</h1>
+          <div class="mui-dropdown mui-col-md-5 mui-col-md-offset-7">
+            <a class="mdl-layout__tab is-active"> Bienvenido {{currentUser.profile.firstName}}</a>
             <button class="mui-btn mui-btn--small mui-btn--danger mui-btn--fab" data-mui-toggle="dropdown">N
               <span class="mui-caret"></span>
             </button>
@@ -21,18 +22,17 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <ul class="mui-tabs__bar mui-tabs__bar--justified">
+          <ul class="mui-tabs__bar">
           {{#if currentUser}}
-           <li class="mui--is-active"><a > Bienvenido {{currentUser.profile.firstName}}</a></li>
-           <li class="mui--is-active"><a id="preguntas" href="/preguntasView"> Preguntas </a></li>
-           <li class="mui--is-active"><a id="resultados" href="/resultados"> Resultados </a></li>
-           <li class="mui--is-active"><a id="closeSesion" href="">Cerrar Sesion</a></li>
-
+           <li></li>
+           <li><a class="mdl-layout__tab is-active" id="preguntas" href="/preguntasView"> Preguntas </a></li>
+           <li><a class="mdl-layout__tab is-active" id="resultados" href="/resultados"> Resultados </a></li>
+           <li><a class="mdl-layout__tab is-active" id="closeSesion" href=""><img src="imagenes/exit.png"/> Cerrar Sesion</a></li>
 
           {{else}}
-          <a id="home" href="/" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i>Home</a>
-          <a id="signIn" href="/signIn" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i> Acceder a mi cuenta</a>
-          <a id="signUp" href="/signUp" class="mdl-layout__tab is-active"><i class="material-icons" role="presentation">person_pin</i>Crear cuenta</a>
+          <li><a id="home" href="/" class="mdl-layout__tab is-active"><img src="imagenes/home.png"/> Home</a></li>
+          <li><a id="signIn" href="/signIn" class="mdl-layout__tab is-active"><img src="imagenes/login.png"/> Acceder a mi cuenta</a></li>
+          <li><a id="signUp" href="/signUp" class="mdl-layout__tab is-active"><img src="imagenes/signup.png"/> Crear cuenta</a></li>
           {{/if}}
         </ul>
         </div>

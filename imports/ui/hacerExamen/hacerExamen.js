@@ -3,7 +3,8 @@ import { Spreguntas } from '../../api/spreguntas.js';
 import { Vfpreguntas } from '../../api/VFpreguntas.js';
 import { Calificaciones } from '../../api/calificaciones.js';
 
-var max,preg1,preg2,preg3,preg4,preg5,preg6,preg7,preg8,preg9,preg10,puntos=0,nombre;
+var max,preg1,preg2,preg3,preg4,preg5,preg6,preg7,preg8,preg9,preg10,puntos=0,nombre,tiempoLimite = 300;//1*60000;
+var countdown = new ReactiveCountdown(tiempoLimite);
 
 Template.hacerExamen.onRendered(function(){
     Meteor.subscribe('spreguntas');
@@ -13,12 +14,16 @@ Template.hacerExamen.onRendered(function(){
 Template.hacerExamen.events({
   'click #IniciarExamen'(event){
     if ($("#nombreInput").val()!=""){
-      var tiempoLimite = 5000;//1*60000;
-      setTimeout(function(){
+      countdown.start(function() {
         var btnTerminar = document.getElementById("finalizarExamen");
         swal("Tiempo Agotado","Limite de tiempo de 5 minutos a termiando", "info");
         btnTerminar.click();
-      }, tiempoLimite);
+      });
+    //  setTimeout(function(){
+//        var btnTerminar = document.getElementById("finalizarExamen");
+  //      swal("Tiempo Agotado","Limite de tiempo de 5 minutos a termiando", "info");
+    //    btnTerminar.click();
+      //}, tiempoLimite);
 
       swal("Muy Bien", "Examen apunto de inicar", "info");
       document.getElementById("divPreExamen").style.display = "none";
@@ -100,9 +105,9 @@ Template.hacerExamen.events({
         console.log(err);
       }
       else{
-        swal("Hola "+nombre, "Tu nota Final es de "+newCalificacion.nota+"%", "info");
         document.getElementById("divPreExamen").style.display = "inline";
         document.getElementById("divExamen").style.display = "none";
+        swal("Hola "+nombre, "Tu nota Final es de "+newCalificacion.nota+"%", "info");
       }
     });
     puntos=0;
@@ -141,7 +146,10 @@ Template.hacerExamen.helpers({
   },
   PreguntasVF5: function(){
     return Vfpreguntas.find({'numero':preg10}).fetch();
-  }
+  },
+  getCountdown: function() {
+        return countdown.get();
+    }
 });
 
 rbSeleccionadoSU = function(rb1,rb2,rb3,rb4){
