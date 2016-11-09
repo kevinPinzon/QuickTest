@@ -5,18 +5,11 @@
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
           <h1 class="mui--text-display2"><img src="imagenes/exam.png"/> QuickTest</h1>
-          <div class="mui-dropdown mui-col-md-5 mui-col-md-offset-7">
-            <a class="mdl-layout__tab is-active"> Bienvenido {{currentUser.profile.firstName}}</a>
-            <button class="mui-btn mui-btn--small mui-btn--danger mui-btn--fab" data-mui-toggle="dropdown">N
-              <span class="mui-caret"></span>
-            </button>
-            <ul class="mui-dropdown__menu">
-             <li><a href="#">Option 1</a></li>
-             <li><a href="#">Option 2</a></li>
-             <li><a href="#">Option 3</a></li>
-             <li><a href="#">Option 4</a></li>
-           </ul>
+          {{#if currentUser}}
+          <div class="mui-dropdown mui-col-md-5 mui-col-md-offset-8">
+            <a class="mdl-layout__tab is-active"><img src="imagenes/user.png"/> Bienvenido {{currentUser.profile.firstName}}</a>
            </div>
+           {{/if}}
         </div>
 
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -25,8 +18,8 @@
           <ul class="mui-tabs__bar">
           {{#if currentUser}}
            <li></li>
-           <li><a class="mdl-layout__tab is-active" id="preguntas" href="/preguntasView"> Preguntas </a></li>
-           <li><a class="mdl-layout__tab is-active" id="resultados" href="/resultados"> Resultados </a></li>
+           <li><a class="mdl-layout__tab is-active" id="preguntas" href="/preguntasView"><img src="imagenes/question.png"/> Preguntas </a></li>
+           <li><a class="mdl-layout__tab is-active" id="resultados" href="/resultados"><img src="imagenes/resultados.png"/> Resultados </a></li>
            <li><a class="mdl-layout__tab is-active" id="closeSesion" href=""><img src="imagenes/exit.png"/> Cerrar Sesion</a></li>
 
           {{else}}
