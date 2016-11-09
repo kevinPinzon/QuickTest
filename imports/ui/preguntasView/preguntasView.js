@@ -46,9 +46,9 @@ Template.preguntasView.events({
             console.log(err);
           }
           else{
-            swal("Muy Bien", "Pregunta agregada exitosamente", "success");
             document.getElementById("formVF").style.display = "none";
             document.getElementById("agregarVF").style.display = "none";
+            swal("Muy Bien", "Pregunta agregada exitosamente", "success");
             $("#afirmacionVF").val("");
           }
         });
@@ -86,9 +86,9 @@ Template.preguntasView.events({
             console.log(err);
           }
           else{
-            swal("Muy Bien", "Pregunta agregada exitosamente", "success");
             document.getElementById("formSU").style.display = "none";
             document.getElementById("agregarSU").style.display = "none";
+            swal("Muy Bien", "Pregunta agregada exitosamente", "success");
             $("#preguntaSU").val("");
             $("#correcta").val("");
             $("#respuesta1").val("");
