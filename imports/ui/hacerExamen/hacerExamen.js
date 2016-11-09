@@ -205,7 +205,7 @@ revisar = function(valorSeleccionado,num){
 };
 
 randomPreguntas = function(){
-  max = 10;
+  max = 20;
   preg1 = Math.floor(Math.random() * (max - 0)) + 0;
   //("preg1: "+preg1);
   do {
