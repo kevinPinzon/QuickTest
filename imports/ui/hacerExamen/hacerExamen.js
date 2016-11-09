@@ -15,8 +15,8 @@ Template.hacerExamen.events({
   'click #IniciarExamen'(event){
     if ($("#nombreInput").val()!=""){
       countdown.start(function() {
-        var btnTerminar = document.getElementById("finalizarExamen");
         swal("Tiempo Agotado","Limite de tiempo de 5 minutos a termiando", "info");
+        var btnTerminar = document.getElementById("finalizarExamen");
         btnTerminar.click();
       });
     //  setTimeout(function(){
@@ -105,9 +105,9 @@ Template.hacerExamen.events({
         console.log(err);
       }
       else{
+        swal("Hola "+nombre, "Tu nota Final es de "+newCalificacion.nota+"%", "info");
         document.getElementById("divPreExamen").style.display = "inline";
         document.getElementById("divExamen").style.display = "none";
-        swal("Hola "+nombre, "Tu nota Final es de "+newCalificacion.nota+"%", "info");
       }
     });
     puntos=0;
@@ -205,7 +205,7 @@ revisar = function(valorSeleccionado,num){
 };
 
 randomPreguntas = function(){
-  max = 6;
+  max = 10;
   preg1 = Math.floor(Math.random() * (max - 0)) + 0;
   console.log("preg1: "+preg1);
   do {

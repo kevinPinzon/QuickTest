@@ -91,6 +91,7 @@ Template.preguntasView.events({
             swal("Muy Bien", "Pregunta agregada exitosamente", "success");
             $("#preguntaSU").val("");
             $("#correcta").val("");
+            $("#respuesta0").val("");
             $("#respuesta1").val("");
             $("#respuesta2").val("");
             $("#respuesta3").val("");
