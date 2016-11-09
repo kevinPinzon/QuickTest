@@ -6,7 +6,7 @@ Template.signIn.events({
             if(error){
                 swal("Error", "Usuario o contraseña incorrecta.", "error");
             }else{
-                Router.go('/');
+                Router.go('/resultados');
             }
         })
     }

@@ -29,16 +29,16 @@ Template.hacerExamen.events({
       document.getElementById("divPreExamen").style.display = "none";
       document.getElementById("divExamen").style.display = "inline";
         nombre= document.getElementById('nombreInput').value;
-        console.log("pregunta1: "+preg1);
-        console.log("pregunta2: "+preg2);
-        console.log("pregunta3: "+preg3);
-        console.log("pregunta4: "+preg4);
-        console.log("pregunta5: "+preg5);
-        console.log("pregunta6: "+preg6);
-        console.log("pregunta7: "+preg7);
-        console.log("pregunta8: "+preg8);
-        console.log("pregunta9: "+preg9);
-        console.log("pregunta10: "+preg10);
+        //("pregunta1: "+preg1);
+        //("pregunta2: "+preg2);
+        //("pregunta3: "+preg3);
+        //("pregunta4: "+preg4);
+        //("pregunta5: "+preg5);
+        //("pregunta6: "+preg6);
+        //("pregunta7: "+preg7);
+        //("pregunta8: "+preg8);
+        //("pregunta9: "+preg9);
+        //("pregunta10: "+preg10);
     }else {
       swal("Error", "Formulario Incompleto", "error");
     }
@@ -55,16 +55,16 @@ Template.hacerExamen.events({
     var selecionada9 = rbSeleccionado("rbV4","rbF4");
     var selecionada10 = rbSeleccionado("rbV5","rbF5");
 
-    console.log("selecionada1: "+selecionada1);
-    console.log("selecionada2: "+selecionada2);
-    console.log("selecionada3: "+selecionada3);
-    console.log("selecionada4: "+selecionada4);
-    console.log("selecionada5: "+selecionada5);
-    console.log("selecionada6: "+selecionada6);
-    console.log("selecionada7: "+selecionada7);
-    console.log("selecionada8: "+selecionada8);
-    console.log("selecionada9: "+selecionada9);
-    console.log("selecionada10: "+selecionada10);
+    //("selecionada1: "+selecionada1);
+    //("selecionada2: "+selecionada2);
+    //("selecionada3: "+selecionada3);
+    //("selecionada4: "+selecionada4);
+    //("selecionada5: "+selecionada5);
+    //("selecionada6: "+selecionada6);
+    //("selecionada7: "+selecionada7);
+    //("selecionada8: "+selecionada8);
+    //("selecionada9: "+selecionada9);
+    //("selecionada10: "+selecionada10);
 
     if (selecionada1 > 0) {
       revisarSU(selecionada1,preg1);
@@ -102,7 +102,7 @@ Template.hacerExamen.events({
     };
     Meteor.call('calificacion.insert', newCalificacion,function(err){
       if(err){
-        console.log(err);
+        //(err);
       }
       else{
         swal("Hola "+nombre, "Tu nota Final es de "+newCalificacion.nota+"%", "info");
@@ -182,7 +182,7 @@ revisarSU = function(valorSeleccionado,num){
   var seleccionada = Spreguntas.find({'numero':num,'correcta':valorSeleccionado}).fetch();
   var correcta = Spreguntas.find({'numero':num}).fetch();
   if (JSON.stringify(seleccionada) === JSON.stringify(correcta)){
-    console.log("se suman 10");
+    //("se suman 10");
     puntos++;
   }
 }
@@ -190,56 +190,56 @@ revisarSU = function(valorSeleccionado,num){
 revisar = function(valorSeleccionado,num){
   var seleccionada = Vfpreguntas.find({'numero':num,'valor':valorSeleccionado}).fetch();
   var correcta = Vfpreguntas.find({'numero':num}).fetch();
-  console.log("dentro de funcion revisar-----------------------------------------");
-  console.log("valorSeleccionado: "+valorSeleccionado);
-  console.log("pregunta num: "+ num);
-  console.log("seleccionada: ");
-  console.log(Vfpreguntas.find({'numero':num,'valor':valorSeleccionado}).fetch());
-  console.log("correcta: ");
-  console.log(Vfpreguntas.find({'numero':num}).fetch());
+  //("dentro de funcion revisar-----------------------------------------");
+  //("valorSeleccionado: "+valorSeleccionado);
+  //("pregunta num: "+ num);
+  //("seleccionada: ");
+  //(Vfpreguntas.find({'numero':num,'valor':valorSeleccionado}).fetch());
+  //("correcta: ");
+  //(Vfpreguntas.find({'numero':num}).fetch());
   if (JSON.stringify(seleccionada) === JSON.stringify(correcta)){
-    console.log("se suman 10");
+    //("se suman 10");
     puntos++;
   }
-  console.log("saliendo de funcion revisar-----------------------------------------");
+  //("saliendo de funcion revisar-----------------------------------------");
 };
 
 randomPreguntas = function(){
   max = 10;
   preg1 = Math.floor(Math.random() * (max - 0)) + 0;
-  console.log("preg1: "+preg1);
+  //("preg1: "+preg1);
   do {
     preg2 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg2: "+preg2);
+    //("preg2: "+preg2);
   }while (preg1 == preg2);
   do {
     preg3 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg3: "+preg3);
+    //("preg3: "+preg3);
   }while (preg1 == preg3 ||preg2 == preg3);
   do {
     preg4 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg4: "+preg4);
+    //("preg4: "+preg4);
   } while (preg1 == preg4 ||preg2 == preg4 || preg3 == preg4);
   do {
     preg5 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg5: "+preg5);
+    //("preg5: "+preg5);
   } while (preg1 == preg5 ||preg2 == preg5 || preg3 == preg5 || preg4 == preg5);
   preg6 = Math.floor(Math.random() * (max - 0)) + 0;
-  console.log("preg6: "+preg6);
+  //("preg6: "+preg6);
   do {
     preg7 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg7: "+preg7);
+    //("preg7: "+preg7);
   }while (preg6 == preg7);
   do {
     preg8 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg8: "+preg8);
+    //("preg8: "+preg8);
   }while (preg6 == preg8 ||preg7 == preg8);
   do {
     preg9 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg9: "+preg9);
+    //("preg9: "+preg9);
   } while (preg6 == preg9 ||preg7 == preg9 || preg8 == preg9);
   do {
     preg10 = Math.floor(Math.random() * (max - 0)) + 0;
-    console.log("preg10: "+preg10);
+    //("preg10: "+preg10);
   } while (preg6 == preg10 ||preg7 == preg10 || preg8 == preg10 || preg9 == preg10);
 }

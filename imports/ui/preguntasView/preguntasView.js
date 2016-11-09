@@ -29,9 +29,9 @@ Template.preguntasView.events({
       var afirmacion = document.getElementById('afirmacionVF').value;
       var respuestaVF=true;
       if (document.getElementById('rbVerdadero').checked) {
-        console.log("verdadero");
+        //("verdadero");
       }else {
-        console.log("falso");
+        //("falso");
         respuestaVF=false;
       }
       if ($("#afirmacionVF").val()!=""){
@@ -43,7 +43,7 @@ Template.preguntasView.events({
         };
         Meteor.call('vfpregunta.insert', addVF,function(err){
           if(err){
-            console.log(err);
+            //(err);
           }
           else{
             document.getElementById("formVF").style.display = "none";
@@ -64,13 +64,13 @@ Template.preguntasView.events({
       var respuesta2 = document.getElementById('respuesta2').value;
       var respuesta3 = document.getElementById('respuesta3').value;
 
-      //console.log("pregunta: "+);
+      ////("pregunta: "+);
       if ($("#preguntaSU").val()!="" && $("#respuesta0").val()!="" && $("#respuesta1").val()!="" && $("#respuesta2").val()!="" && $("#respuesta3").val()!="") {
-        console.log("pregunta: "+pregunta);
-        console.log("respuesta0: "+respuesta0);
-        console.log("respuesta1: "+respuesta1);
-        console.log("respuesta2: "+respuesta2);
-        console.log("respuesta3: "+respuesta3);
+        //("pregunta: "+pregunta);
+        //("respuesta0: "+respuesta0);
+        //("respuesta1: "+respuesta1);
+        //("respuesta2: "+respuesta2);
+        //("respuesta3: "+respuesta3);
 
         var addSU = {
           pregunta: pregunta,
@@ -83,7 +83,7 @@ Template.preguntasView.events({
         };
         Meteor.call('spregunta.insert', addSU,function(err){
           if(err){
-            console.log(err);
+            //(err);
           }
           else{
             document.getElementById("formSU").style.display = "none";
